@@ -7,3 +7,36 @@ body {
     background-repeat: no-repeat;
 
 }
+
+.navbar {
+    background-color: yellowgreen;
+    color: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.dropdown select {
+    background-color: yellowgreen;
+    color: blue;
+    border: none;
+}
+
+.navbar a {
+    color: blue;
+    text-decoration: none;
+}
+
