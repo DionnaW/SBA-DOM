@@ -1,42 +1,60 @@
 
 
 body {
-    background-image: url(/images/IMG_2048.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
-}
-
-.navbar {
-    background-color: yellowgreen;
-    color: #fff;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-}
-
-.nav-menu {
-    list-style-type: none;
+    background-color: aqua;
     margin: 0;
-    padding: 0;
-    display: flex;
+
 }
 
-.nav-item {
-    margin-right: 20px;
+#top-menu {
+  background-color: #f2f2f2;
+  padding: 10px;
 }
 
-.dropdown select {
-    background-color: yellowgreen;
-    color: blue;
-    border: none;
+#top-menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar a {
-    color: blue;
-    text-decoration: none;
+#top-menu ul li {
+  position: relative;
 }
 
+.submenu-items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+.submenu-items li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.submenu-items li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.submenu-items.active {
+  display: block;
+}
+
+#top-menu ul li span {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #333;
+  cursor: default;
+}
+
+#top-menu ul li:hover > .submenu-items {
+  display: block;
+}

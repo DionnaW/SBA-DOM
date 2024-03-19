@@ -1,10 +1,84 @@
-const h1El = document.getElementById('h-1');
-console.log(h1El);
-h1El.style.color = 'red';
-h1El.style.textAlign ='center'; 
+var menuLinks = [
+    { text: 'about', href: '/about' },
+    { text: 'orders', href: '/orders' },
+    { text: 'account', href: '/account' },
+  ];
 
-const h2El = document.getElementById('h-2');
-console.log(h2El);
+const flavors = ['Kiwi', 'Sponge Bob', 'Orange Cream', 'Red Lips', 'Blue Lips', 'Strawberry', 'Grape', 'Blueberry'];
+const submenuItems = document.querySelector('.submenu-items');
+
+flavors.forEach(function(flavor) {
+  const liEl = document.createElement('li');
+  const aEl = document.createElement('a');
+
+  aEl.href = `#${flavor.toLowerCase().replace(/ /g, '-')}`;
+  aEl.textContent = flavor;
+
+  liEl.appendChild(aEl);
+  submenuItems.appendChild(liEl);
+
+  aEl.addEventListener('click', function() {
+    submenuItems.classList.toggle('active');
+  });
+});
+
+
+const mainEl = document.getElementById('h-1');
+console.log(mainEl);
+mainEl.style.color = 'red';
+mainEl.style.textAlign ='center'; 
+
+for (var i = 0; i < menuLinks.length; i++) {
+    var link = menuLinks[i]; 
+    
+    //create an <a> element
+var aEl = document.createElement('a');
+
+//add href attribute w/it's value of the href property of the 'link' object
+ aEl.href = link.href;
+
+//set new element content to the value of the text property of the 'link' object
+ aEl.textContent = link.text;
+
+//append new element to the topMenuEl
+ document.body.appendChild(aEl);
+
+ }
+//cache <nav id ="top-menu"> element to topMenuEl
+mainEl.innerHTML = "<h1> DEEZ COLD ONES <br> SNOW CONES </h1>";
+mainEl.style.textAlign = "center";
+mainEl.classList.add("flex-ctr");
+
+const topMenuEl = document.getElementById('top-menu');
+console.log(topMenuEl);
+topMenuEl.style.height = '100%';
+topMenuEl.style.backgroundColor = '#ffff00';
+topMenuEl.classList.add('flex-around');
+
+//iterate over menuLinks array and for each 'link' object
+for (var i = 0; i < menuLinks.length; i++) {
+    var link = menuLinks[i];
+    
+//create an <a> element
+var aEl = document.createElement('a');
+
+//add href attribute w/it's value of the href property of the 'link' object
+aEl.href = link.href;
+
+//set new element content to the value of the text property of the 'link' object
+aEl.textContent = link.text;
+
+//append new element to the topMenuEl
+topMenuEl.prepend(aEl);  //had to google/append put the array to the side of pg/'PREPEND' puts at top
+}
+
+//  let mainEl = document.querySelector('main');
+// console.log(mainEl);
+
+// mainEl.innerHTML = "<h1> DEEZ COLD ONES SNOW CONES </h1>";
+// mainEl.style.textAlign = "center";
+// mainEl.classList.add("flex-ctr");
+
 
 
 //const topMenuEl = document.getElementById('top-menu');
@@ -12,20 +86,31 @@ console.log(h2El);
 //topMenuEl.style.height = '100%';
 //topMenuEl.style.backgroundColor = '#0e9aa7';
 //topMenuEl.classList.add('flex-around');
-//h2El.style.
 
-const flavors = ['Kiwi', 'Sponge Bob', 'Orange Cream', 'Red Lips', 'Blue Lips', 'Strawberry', 'Grape', 'Blueberry'];
-const choseEl = document.querySelector('select');
 
-flavors.forEach(function(flavor) {
-    const optionEl = document.createElement('option');
+// const navEl = document.getElementById('.navbar');
+// console.log(navEl);
+// 
 
-    optionEl.textContent = flavor;
+// navEl.style.height = '100%';
+// navEl.style.backgroundColor = '#9ACD32';
+// navEl.classList.add('flex-around');
+// 
+// for (var i = 0; i < menuLinks.length; i++) {
+    // var link = menuLinks[i];
+    
+//create an <a> element
+// var aEl = document.createElement('a');
 
-    optionEl.value = flavor;
+//add href attribute w/it's value of the href prope
+// aEl.href = link.href;
 
-    choseEl.appendChild(optionEl)
-})
+//set new element content to the value of the text 
+// aEl.textContent = link.text;
+
+//append new element to the topMenuEl
+// navEl.prepend(aEl);  //had to google/append put
+// }
 
 
 //let aTag = document.createElement('a');
