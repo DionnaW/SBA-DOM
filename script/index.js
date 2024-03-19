@@ -28,7 +28,14 @@ console.log(mainEl);
 mainEl.style.color = 'red';
 mainEl.style.textAlign ='center'; 
 
-for (var i = 0; i < menuLinks.length; i++) {
+let pEl = document.querySelector('p'); 
+console.log(pEl);
+
+pEl.innerHTML = '<strong>50 + <br> FLAVORS</strong>';
+
+
+
+for (let i = 0; i < menuLinks.length; i++) {
     var link = menuLinks[i]; 
     
     //create an <a> element
@@ -38,7 +45,7 @@ var aEl = document.createElement('a');
  aEl.href = link.href;
 
 //set new element content to the value of the text property of the 'link' object
- aEl.textContent = link.text;
+//  aEl.textContent = link.text;/
 
 //append new element to the topMenuEl
  document.body.appendChild(aEl);
@@ -51,22 +58,22 @@ mainEl.classList.add("flex-ctr");
 
 const topMenuEl = document.getElementById('top-menu');
 console.log(topMenuEl);
-topMenuEl.style.height = '100%';
+topMenuEl.style.height = '50px';
 topMenuEl.style.backgroundColor = '#ffff00';
 topMenuEl.classList.add('flex-around');
 
 //iterate over menuLinks array and for each 'link' object
-for (var i = 0; i < menuLinks.length; i++) {
+for (let i = 0; i < menuLinks.length; i++) {
     var link = menuLinks[i];
     
 //create an <a> element
 var aEl = document.createElement('a');
 
 //add href attribute w/it's value of the href property of the 'link' object
-aEl.href = link.href;
+// aEl.href = link.href;
 
 //set new element content to the value of the text property of the 'link' object
-aEl.textContent = link.text;
+// aEl.textContent = link.text;
 
 //append new element to the topMenuEl
 topMenuEl.prepend(aEl);  //had to google/append put the array to the side of pg/'PREPEND' puts at top
