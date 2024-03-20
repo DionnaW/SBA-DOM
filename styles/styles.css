@@ -2,14 +2,18 @@
 
 body {
 
-    background-color: aqua;
-    margin: 0;
+    background-color: whitesmoke;
+    background-image: url("/DOMsba/images/pexels-david-disponett-16630831.jpg");
+    background-size: cover;
+    margin: auto;
+    overflow: hidden;
 
 }
 
 #top-menu {
   background-color: #f2f2f2;
   padding: 5px;
+  border-style: solid;
 }
 
 #top-menu ul {
@@ -27,13 +31,17 @@ body {
 
 .submenu-items {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 100%;
-  background-color: #f2f2f2;
-  padding: 10px;
+  background-color: #faf0dc;
+  padding: 8px;
   margin-top: 2px;
   /* white-space: nowrap; this deals with the floavors aslo */
 }
+
+/* .submenu-items.visible { */
+  /* display: block; show the submenu items when the "visible" class is added */
+/* } */
 
 .submenu-items li {
   display: inline-block;
@@ -50,12 +58,28 @@ body {
 }
 
 #top-menu ul li span {
-  /* display: inline-block; */
+  display: inline-block;
   padding: 10px 15px;
-  color: #333;
-  cursor: default;
+  color: palevioletred;
+  cursor: pointer;
+  outline-style: dotted;
 }
 
 #top-menu ul li:hover > .submenu-items {
   display: block;
+}
+
+.show {
+  display: block;
+}
+
+footer {
+  margin-top: 300px;
+}
+
+p {
+margin-left: 45%;
+font-size: 25px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 800;
 }
