@@ -12,6 +12,9 @@ const submenuItems = document.querySelector('.submenu-items');
 console.log(submenuItems);
 console.log(submenuItems.parentElement);
 
+const submenuEl = document.querySelectorAll('submenu');
+console.log(submenuEl);
+
 const flavorsMenuEl = document.querySelector('.submenu-items');
 console.log(flavorsMenuEl);
 
